@@ -1,0 +1,30 @@
+<p>calculator works!</p>
+<table class="table-auto">
+    <caption class="caption-top text-orange-600">តារាងតម្លៃទំំនិញ</caption>
+    <thead>
+        <tr>
+            <th>តម្លៃទំនិញជាយ៉ន</th>
+            <th>អាត្រាប្តូរប្រាក់</th>
+            <th>តម្លៃទំនិញជាដុល្លារ</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <input type="number">
+            </td>
+            <td> 
+                <select>
+                    @for (rate of rates; track $index) {
+                        <option value="{rate}">{{rate}}</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <button class="bg-orange-500 text-white rounded block m-auto hover:bg-orange-700">គណនា</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
