@@ -1,18 +1,19 @@
-<app-navbar></app-navbar>
-<h1 class="font-bold text-orange-400 text-center"> hello</h1>
-<button 
-class="block mx-auto bg-lime-500 px-4 rounded text-white hover:bg-lime-600"
-(click)="clickBtn()"
->
-Click
-</button>
-@if(text){
-<span class="text-white bg-red-500 p-3 w-1/2 rounded block m-auto mt-[10px] text-center font-[bayon]">
-    {{text}}
+<span class="text-orange-500">
+    {{getFullDateKhmer()}}
+    {{time1}}
 </span>
-}
 <app-footer/>
-  <router-outlet></router-outlet>
-
-<h1> Test </h1>
-<app-calculator/>
+<div>
+    <h1>text format</h1>
+    <input type="text" 
+    class="border"
+    (input)="textFormat($event)"><br><br>
+    <p>
+        អក្សរតូច:
+        <span class="invisible border rounded border-orange-500 bg-red-400 text-white font-3 font-[hanuman] "
+        [class.invisible]="text().length === 0">
+             {{text()}}
+            </span>
+    </p>
+    <span></span>
+</div>
