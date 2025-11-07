@@ -1,0 +1,15 @@
+<nav class="bg-sky-500 p-5">
+    <ul>
+        <li>
+            @for (nav of navItem; track $index) {
+                <a 
+                class="m-5  text-white hover:bg-sky-700 hover:rounded"
+                [routerLink]="nav.path"
+                routerLinkActive="text-red-500 border-b-2 border-red-600"
+          [routerLinkActiveOptions]="{ exact: true }">
+                    {{nav.label}}
+                </a>
+            }
+        </li>
+    </ul>
+</nav>

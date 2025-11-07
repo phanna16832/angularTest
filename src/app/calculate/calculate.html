@@ -1,0 +1,39 @@
+<h1>normal calculation</h1>
+<label for="price"
+class="text-red-600">
+  តម្លៃទំនិញ | 货物价格:
+</label>
+<input 
+type="number"
+ name="price" 
+id="price" 
+[(ngModel)]="price"
+class="border border-red-600 outine-red-600 text-red-600 text-md"
+><br>
+
+<select name="rate" id="rate" [(ngModel)]="selectedRate">
+  @for (r of rates; track $index) {
+    <option [value]="r">{{ r }}</option>
+  }
+</select><br><br>
+
+<button 
+(click)="cal()"
+class="border border-red-600 text-red-600 rounded text-lg hover:bg-red-800 hover:text-white cursor-pointer ">
+  Calculate
+</button>
+<button 
+(click)="copyById('resultText')"
+class="ml-20 border border-lime-600 text-lime-600 rounded text-lg hover:bg-lime-800 hover:text-white cursor-pointer "
+>
+Copy
+</button>
+<span
+class="text-red-600 font-bold mt-[200px]">{{notify}}</span>
+<pre class="text-wrap" id="resultText">
+{{ resultText }}
+</pre>
+
+
+
+<span>{{copyResult}}</span>
