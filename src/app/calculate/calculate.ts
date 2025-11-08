@@ -30,6 +30,13 @@ export class Calculate {
     }
     else{this.resultText = `ទិន្នន័យបញ្ចូលមិនគ្រប់គ្រាន់សូមបញ្ចូលម្តងទៀត`}
   }
+  price1 = "";
+  convertPrice = "";
+  correctPrice = "";
+  cal1(){
+    const rate1 = 6.1;
+
+  }
   
 
   //copyfucntion

@@ -6,7 +6,7 @@ import { Calculate } from "./calculate/calculate";
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, RouterOutlet, Calculate],
+  imports: [Navbar, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
